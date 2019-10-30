@@ -1,0 +1,7 @@
+ebp  extended  base pointer
+esp  extended  stack pointer
+
+当call某个新地址时 用ebp存储当前地址  
+
+将当前ebp地址传给esp,当跳转的地址执行完后
+ebp再次赋值给esp ,弹出ebp,esp继续向后执行
