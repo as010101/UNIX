@@ -5,3 +5,7 @@ esp  extended  stack pointer
 
 将当前ebp地址传给esp,当跳转的地址执行完后
 ebp再次赋值给esp ,弹出ebp,esp继续向后执行
+
+
+stdcall   由被调用的函数自己清理栈
+cdecall   由主动调用者清理栈
