@@ -4,3 +4,5 @@ sudo passwd root回车Password:
 Enter new UNIX password:
 这时输入要设置的root密码两次就会看到
 password updated successfully了!
+  
+  rm -r target
