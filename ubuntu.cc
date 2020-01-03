@@ -6,3 +6,6 @@ Enter new UNIX password:
 password updated successfully了!
   
   rm -r target
+
+
+查询端口使用情况  netstat -nultp
