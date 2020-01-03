@@ -80,6 +80,18 @@ A&C B&C 得到的是同值
 
 
 
+I-O blocking   client 发送很多数据阻塞了不能读， server发送部分数据，发完之后阻塞等client读并给到ack,但是client一直阻塞在send，没给ack,导致
+server也一直阻塞在send
+
+正确使用tcp 安全关闭：有时候client发送数据后就立即close，可能会导致server收到的数据不全，可能是ip的数据栈还没被发送完时就被强行关闭了
+      还有种情况是client发送数据的过程中，server发送数据给client，client此时并没有时间去读，client发完数据后立刻关闭，此时server就会收到一个reset
+      信号，server强行关闭，导致收到的数据不全
+      client的安全关闭做法：将tcp写端关掉（会导致对方关闭连接），然后一直读数据，直到read返回0(eof 表明对方已关闭连接) socket关闭
+      
+      server 只要 read返回0 close就可以了
+
+
+
 
 
 
