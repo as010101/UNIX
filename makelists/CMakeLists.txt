@@ -1,3 +1,4 @@
 project(HELLO)
 set(SRC_LIST main.c)
-add_executable(hello ${SRC_LIST}))
+
+add_executable(hello ${SRC_LIST})

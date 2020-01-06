@@ -1,0 +1,3 @@
+/home/asele/makelist/UNIX/makelists/build/CMakeFiles/rebuild_cache.dir
+/home/asele/makelist/UNIX/makelists/build/CMakeFiles/hello.dir
+/home/asele/makelist/UNIX/makelists/build/CMakeFiles/edit_cache.dir
