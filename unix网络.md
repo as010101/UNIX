@@ -91,6 +91,8 @@ server也一直阻塞在send
       server 只要 read返回0 close就可以了
 
 
+从C++11开始，标准库里已经包含了对线程的支持，std::thread是C++11标准库中的多线程的支持库，pthread.h是标准库没有添加多线程之前的在Linux上用的多线程库，而之前在windows上的多线程支持要包含wndows.h
+
 
 
 
