@@ -9,3 +9,8 @@ password updated successfully了!
 
 
 查询端口使用情况  netstat -nultp
+
+
+ps aux | grep -i apt   
+
+kill -9  1  强制杀死某个进程
