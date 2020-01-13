@@ -14,3 +14,14 @@ password updated successfully了!
 ps aux | grep -i apt   
 
 kill -9  1  强制杀死某个进程
+
+
+编译要加  CFLAGS = -g  才能列出源码
+
+gdb ./可执行文件
+
+l 列出代码 
+n 逐行
+s step 跳入
+
+
