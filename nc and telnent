@@ -1,0 +1,16 @@
+Note: There are several different Telnet programs, as well as several different Netcat variants. They might have somewhat different features.
+
+In general, telnet specifically speaks the RFC 854 "Telnet" protocol – it recognizes certain bytes as Telnet options negotiation commands coming from the server, will respond to them appropriately, and will send its own at the beginning of each connection. (For example, it reports the $TERM value and window size in lines×columns to the server.) It will also translate Unix LF line breaks to the NVT CR+LF version, and will recognize Ctrl+] as an "escape" key.
+
+This makes telnet unsuitable for raw 8-bit TCP connections as it would mangle the transferred data, and it doesn't work well for batch usage in general. However it can still be used to interactively poke around ASCII-based protocols such as FTP or SMTP – it works because many Telnet clients do not initiate negotiation if connecting to a nonstandard port (but they will still respond to it).
+
+Netcat nc doesn't do anything like that – it is primarily a 8-bit clean TCP client. It can be used with ASCII protocols just like telnet, but also can and often is used as a "pipe" into TCP for batch data transfer, because it will not alter any byte sent through it.
+
+Netcat often also offers non-TCP transports (UDP, sometimes SCTP, local Unix sockets) whereas Telnet clients are TCP-only.
+
+On the other hand, netcat doesn't understand any protocols – if you tried connecting to a real Telnet server using nc, it would not work very well at all; the server wouldn't know what terminal type you're using, the window couldn't be resized, etc.
+
+If you are connecting to a Telnet server on port 23, use telnet.
+If you need something like cat but for TCP, use nc or even socat.
+If you need to send/receive non-text data, use nc/socat – avoid telnet.
+If you want to manually type in SMTP or IRC or IMAP or HTTP commands, both tools will work fine. (In fact, telnet might work slightly better, as it converts line endings to CR+LF which some such servers also require.)
