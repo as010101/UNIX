@@ -1,0 +1,13 @@
+cmake_mininum_required(VERSION 2.8)
+project (Demon)
+add_excutable(Demon1   a.cpp b.cpp)
+
+如果源文件很多,一个一个添加比较麻烦,可指定目录让其自己去找
+
+
+cmake_mininum_required(VERSION 2.8)
+project (Demon)
+aux_source_directory(. DIR_SOURCE)
+add_excutable(Demon1 ${DIR_SOURCE})
+
+--------------------------------------------------------------
