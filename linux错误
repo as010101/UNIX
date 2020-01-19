@@ -1,0 +1,3 @@
+问题 apt-get install automake  解决办法
+
+./autogen.sh: 1: eval: aclocal: not found error: while running 'aclocal'       apt-get install automake
