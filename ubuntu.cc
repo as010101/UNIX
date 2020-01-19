@@ -23,5 +23,10 @@ gdb ./可执行文件
 l 列出代码 
 n 逐行
 s step 跳入
+b  某列或者函数名
+undisplay
+display  显示某个变量
 
+apt-get apt isntall 安装软件
+wget  下载软件
 
