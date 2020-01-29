@@ -16,4 +16,9 @@ flask的安装使用
 1. 安装pip
 2.安装pipenv
 3 pipenv install flask
-4 在指定文件目录下 执行 flask run,进入 flask shell
+4 pipenv shell,进入 flask shell
+5 在指定文件目录下 执行 flask run 
+
+
+
+pipenv  run  python  hello.py
