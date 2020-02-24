@@ -22,3 +22,6 @@ flask的安装使用
 
 
 pipenv  run  python  hello.py
+
+
+在flask.py中若要引用其他py文件的class，在顶部import其路径
